@@ -93,6 +93,11 @@ app.delete('/api/todos/:todo_id', function(req, res) {
 	});
 });
 
+// Senda allar beiðnir á index.html og angular sér um rest
+app.get('*', function(req, res) {
+	res.sendfile('./public/index.html');
+});
+
 //------------------
 // Keyra upp app
 //------------------
